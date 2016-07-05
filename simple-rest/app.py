@@ -97,7 +97,7 @@ def api_users(userid):
 
 
 if __name__ == '__main__':
-    parser = optparse.OptionParser(usage='python rest.py -p ')
+    parser = optparse.OptionParser(usage='python app.py -p ')
     parser.add_option('-p', '--port', action='store', dest='port', help='The port to listen on.')
     (args, _) = parser.parse_args()
     if args.port is None:

@@ -1,0 +1,21 @@
+###################################################################
+# Build image:                                                    #
+#   docker build --tag="full-gamut" .                             #
+#                                                                 #
+# Run container:                                                  #
+#   docker run -d -p 80:80 full-gamut                             #
+###################################################################
+FROM ubuntu:14.04
+
+# Install Packages
+RUN apt-get update && \
+    apt-get install -y curl python-dev python-pip libmysqlclient-dev
+
+# Install app dependencies
+RUN pip install Flask flask_restful Flask-MySQL
+
+# Bundle app source
+COPY app.py /src/app.py
+
+EXPOSE 80 5000
+CMD ["python", "/src/app.py", "-p 80"]
