@@ -6,9 +6,6 @@ Run ./build.sh
 
 ### Run the images
 But only one at a time! Sample usage in subsequent readme files.
- - docker run -d -p 80:80 flask-app
- - docker run -d -p 80:80 flask-rest
- - docker run -d -p 80:80 gamut-basic
 
 ### Code and ideas borrowed from
 A very special thanks to these articles/folks:

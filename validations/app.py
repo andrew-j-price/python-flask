@@ -14,9 +14,11 @@ def api_root():
 
 @app.route('/health', methods=['GET'])
 def api_health():
-    payload = {
-        'API': 'Healthy'
-    }
+    payload = [
+        {
+            'API': 'Healthy'
+        }
+    ]
     data = json.dumps(payload)
     resp = Response(data, status=200, mimetype='application/json')
     return resp
